@@ -1,0 +1,57 @@
+
+
+
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>DesdeParaguay.com - HTML5 Player</title>
+
+    <!-- optimize mobile versions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Flowplayer skin -->
+    <link rel="stylesheet" href="//releases.flowplayer.org/7.2.7/commercial/skin/skin.css">
+
+    <link rel="stylesheet" href="/css/flowdpyvideo.css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.12.4/hls.min.js"></script>
+    <script src="//releases.flowplayer.org/7.2.7/commercial/flowplayer.min.js"></script>
+
+
+    <script>
+
+    window.onload = function () {
+
+        flowplayer("#hlsjslive", {
+            autoplay: true,
+            mutedAutoplay: false,
+            fullscreen: true,
+            key: '$810332848840491',
+            ratio: 9 / 16,
+            clip: {
+                live: true,
+                sources: [
+                    { type: "application/x-mpegurl",
+                        src: "https://zn1gen.desdeparaguay.net/rcctv/rcctv/playlist.m3u8?k=054f24b6b1b06b08b480c045dd0b782d7b1b6771bcb3d791a2151f492fb4abe2&exp=1787228326"
+                    }
+                ]
+            }
+
+        });
+
+    };
+    </script>
+</head>
+<body style="margin: 0">
+
+    <div id="content">
+        <div id="hlsjslive" class="flowplayer fp-edgy fp-mute"></div>
+    </div>
+
+</body>
+</html>
